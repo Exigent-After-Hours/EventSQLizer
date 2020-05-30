@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>EventSQLizer</displayName>
+  <description>EventSQLizer Settings</description>
+  <resources>
+    <stringTable>
+      <string id="EVENTSQLIZER_CATEGORY_NAME">Exigent EventSQLizer</string>
+      <string id="EVENTSQLIZER_CATEGORY_EXPLAIN">Settings for the Exigent EventSQLizer agent.</string>
+	  <string id="DB_CATEGORY_NAME">Database Settings</string>
+      <string id="DB_CATEGORY_EXPLAIN">EventSQLizer SQL database configuration</string>
+	  <string id="ALERT_CATEGORY_NAME">Alert Settings</string>
+      <string id="ALERT_CATEGORY_EXPLAIN">EventSQLizer alert configuration</string>
+	  <string id="METRIC_CATEGORY_NAME">Metric Settings</string>
+      <string id="METRIC_CATEGORY_EXPLAIN">EventSQLizer performance metric configuration</string>
+      <string id="SQL_DATASOURCE_SETTINGNAME">SQL Datasource</string>
+      <string id="SQL_DATASOURCE_EXPLAINTEXT">The address to connect to.  Are you seriously reading this?</string>
+      <string id="SQL_USERID_SETTINGNAME">SQL User</string>
+      <string id="SQL_USERID_EXPLAINTEXT">The username to be used for connections to the SQL server</string>
+      <string id="SQL_PASSWORD_SETTINGNAME">SQL Password</string>
+      <string id="SQL_PASSWORD_EXPLAINTEXT">The SQL password is encrypted here, and is normally set at install time.</string>
+      <string id="SQL_DATABASENAME_SETTINGNAME">Database Name</string>
+      <string id="SQL_DATABASENAME_EXPLAINTEXT">The SQL database to log events to.</string>
+      <string id="ALERT_ENABLE_SETTINGNAME">Enable Alerts</string>
+      <string id="ALERT_ENABLE_EXPLAINTEXT">Enables/Disables alerting.</string>
+	  <string id="ALERT_DESTINATIONS_SETTINGNAME">Alert Destinations</string>
+      <string id="ALERT_DESTINATIONS_EXPLAINTEXT">The URL or comma-separated URLs to send JSON alerts to. EG host.name:port</string>
+      <string id="ALERT_ENABLEBLACKLIST_SETTINGNAME">Enable alert blacklist</string>
+      <string id="ALERT_ENABLEBLACKLIST_EXPLAINTEXT">Enables/Disables alert blacklisting.</string>
+	  <string id="ALERT_BLACKLIST_SETTINGNAME">Blacklisted EventID(s)</string>
+      <string id="ALERT_BLACKLIST_EXPLAINTEXT">The Event ID or comma-separated IDs to block alerts for.</string>
+	  <string id="METRIC_DESTINATIONS_SETTINGNAME">Metric Destinations</string>
+      <string id="METRIC_DESTINATIONS_EXPLAINTEXT">The URL or comma-separated URLs to send metrics to.  EG host.name:port</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SQL_DATASOURCE_PRESENTATION">
+        <textBox refId="SQL_DataSourceName">
+          <label>SQL DSN</label>
+        </textBox>
+      </presentation>
+      <presentation id="SQL_USERID_PRESENTATION">
+        <textBox refId="SQL_UserID">
+          <label>SQL User</label>
+        </textBox>
+      </presentation>
+      <presentation id="SQL_PASSWORD_PRESENTATION">
+        <textBox refId="SQL_Password">
+          <label>SQL Password</label>
+        </textBox>
+      </presentation>
+      <presentation id="SQL_DATABASENAME_PRESENTATION">
+        <textBox refId="SQL_DatabaseName">
+          <label>SQL Database</label>
+        </textBox>
+      </presentation>
+	  <presentation id="ALERT_DESTINATIONS_PRESENTATION">
+        <textBox refId="Alert_Destinations">
+          <label>Alert Destinations</label>
+        </textBox>
+      </presentation>
+	  <presentation id="ALERT_BLACKLIST_PRESENTATION">
+        <textBox refId="Alert_Blacklist">
+          <label>Alert Blacklist</label>
+        </textBox>
+      </presentation>
+	  <presentation id="METRIC_DESTINATIONS_PRESENTATION">
+        <textBox refId="Metric_Destinations">
+          <label>Metric Destinations</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

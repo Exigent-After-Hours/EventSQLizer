@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <policyNamespaces>
+    <target prefix="eventsqlizer" namespace="Microsoft.Policies.EventSQLizer" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  <categories>
+    <category name="eventsqlizer" displayName="$(string.EVENTSQLIZER_CATEGORY_NAME)" explainText="$(string.EVENTSQLIZER_CATEGORY_EXPLAIN)" />
+    <category name="db_settings" displayName="$(string.DB_CATEGORY_NAME)" explainText="$(string.DB_CATEGORY_EXPLAIN)">
+      <parentCategory ref="eventsqlizer" />
+    </category>
+	<category name="alert_settings" displayName="$(string.ALERT_CATEGORY_NAME)" explainText="$(string.ALERT_CATEGORY_EXPLAIN)">
+      <parentCategory ref="eventsqlizer" />
+    </category>
+	<category name="metric_settings" displayName="$(string.METRIC_CATEGORY_NAME)" explainText="$(string.METRIC_CATEGORY_EXPLAIN)">
+      <parentCategory ref="eventsqlizer" />
+    </category>
+  </categories>
+  <policies>
+    <policy name="SQL_DataSource" class="Machine" displayName="$(string.SQL_DATASOURCE_SETTINGNAME)" explainText="$(string.SQL_DATASOURCE_EXPLAINTEXT)" presentation="$(presentation.SQL_DATASOURCE_PRESENTATION)" key="Software\Exigent\EventSQLizer\DB">
+      <parentCategory ref="db_settings" />
+	  <supportedOn ref="windows:SUPPORTED_ProductOnly" />
+      <elements>
+        <text id="SQL_DataSourceName" valueName="DataSourceName" />
+      </elements>
+    </policy>
+	<policy name="SQL_UserID" class="Machine" displayName="$(string.SQL_USERID_SETTINGNAME)" explainText="$(string.SQL_USERID_EXPLAINTEXT)" presentation="$(presentation.SQL_USERID_PRESENTATION)" key="Software\Exigent\EventSQLizer\DB">
+      <parentCategory ref="db_settings" />
+	  <supportedOn ref="windows:SUPPORTED_ProductOnly" />
+      <elements>
+        <text id="SQL_UserID" valueName="UserID" />
+      </elements>
+    </policy>
+	<policy name="SQL_Password" class="Machine" displayName="$(string.SQL_PASSWORD_SETTINGNAME)" explainText="$(string.SQL_PASSWORD_EXPLAINTEXT)" presentation="$(presentation.SQL_PASSWORD_PRESENTATION)" key="Software\Exigent\EventSQLizer\DB">
+      <parentCategory ref="db_settings" />
+	  <supportedOn ref="windows:SUPPORTED_ProductOnly" />
+      <elements>
+        <text id="SQL_Password" valueName="Password" />
+      </elements>
+    </policy>
+	<policy name="SQL_DatabaseName" class="Machine" displayName="$(string.SQL_DATABASENAME_SETTINGNAME)" explainText="$(string.SQL_DATABASENAME_EXPLAINTEXT)" presentation="$(presentation.SQL_DATABASENAME_PRESENTATION)" key="Software\Exigent\EventSQLizer\DB">
+      <parentCategory ref="db_settings" />
+	  <supportedOn ref="windows:SUPPORTED_ProductOnly" />
+      <elements>
+        <text id="SQL_DatabaseName" valueName="DatabaseName" />
+      </elements>
+    </policy>
+	<policy name="Alert_Enable" class="Machine" displayName="$(string.ALERT_ENABLE_SETTINGNAME)" explainText="$(string.ALERT_ENABLE_EXPLAINTEXT)" key="Software\Exigent\EventSQLizer\Alerting" valueName="Enable">
+      <parentCategory ref="alert_settings" />
+	  <supportedOn ref="windows:SUPPORTED_ProductOnly" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+	<policy name="Alert_Destinations" class="Machine" displayName="$(string.ALERT_DESTINATIONS_SETTINGNAME)" explainText="$(string.ALERT_DESTINATIONS_EXPLAINTEXT)" presentation="$(presentation.ALERT_DESTINATIONS_PRESENTATION)" key="Software\Exigent\EventSQLizer\Alerting">
+      <parentCategory ref="alert_settings" />
+	  <supportedOn ref="windows:SUPPORTED_ProductOnly" />
+      <elements>
+        <text id="Alert_Destinations" valueName="Destinations" />
+      </elements>
+    </policy>
+	<policy name="Alert_EnableBlacklist" class="Machine" displayName="$(string.ALERT_ENABLEBLACKLIST_SETTINGNAME)" explainText="$(string.ALERT_ENABLEBLACKLIST_EXPLAINTEXT)" key="Software\Exigent\EventSQLizer\Alerting" valueName="EnableBlacklist">
+      <parentCategory ref="alert_settings" />
+	  <supportedOn ref="windows:SUPPORTED_ProductOnly" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+	<policy name="Alert_Blacklist" class="Machine" displayName="$(string.ALERT_BLACKLIST_SETTINGNAME)" explainText="$(string.ALERT_BLACKLIST_EXPLAINTEXT)" presentation="$(presentation.ALERT_BLACKLIST_PRESENTATION)" key="Software\Exigent\EventSQLizer\Alerting">
+      <parentCategory ref="alert_settings" />
+	  <supportedOn ref="windows:SUPPORTED_ProductOnly" />
+      <elements>
+        <text id="Alert_Blacklist" valueName="Blacklist" />
+      </elements>
+    </policy>
+	<policy name="Metric_Destinations" class="Machine" displayName="$(string.METRIC_DESTINATIONS_SETTINGNAME)" explainText="$(string.METRIC_DESTINATIONS_EXPLAINTEXT)" presentation="$(presentation.METRIC_DESTINATIONS_PRESENTATION)" key="Software\Exigent\EventSQLizer\Metrics">
+      <parentCategory ref="metric_settings" />
+	  <supportedOn ref="windows:SUPPORTED_ProductOnly" />
+      <elements>
+        <text id="Metric_Destinations" valueName="Destinations" />
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>

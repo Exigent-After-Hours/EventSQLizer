@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSQLizer", "EventSQLizer\EventSQLizer.csproj", "{D66EE099-D825-4D1C-A2DE-372E6B6EE4B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D66EE099-D825-4D1C-A2DE-372E6B6EE4B9}.Debug|Any CPU.ActiveCfg = Release|x64
+		{D66EE099-D825-4D1C-A2DE-372E6B6EE4B9}.Debug|Any CPU.Build.0 = Release|x64
+		{D66EE099-D825-4D1C-A2DE-372E6B6EE4B9}.Debug|x64.ActiveCfg = Debug|x64
+		{D66EE099-D825-4D1C-A2DE-372E6B6EE4B9}.Debug|x64.Build.0 = Debug|x64
+		{D66EE099-D825-4D1C-A2DE-372E6B6EE4B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D66EE099-D825-4D1C-A2DE-372E6B6EE4B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D66EE099-D825-4D1C-A2DE-372E6B6EE4B9}.Release|x64.ActiveCfg = Release|x64
+		{D66EE099-D825-4D1C-A2DE-372E6B6EE4B9}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25C157B7-B615-41DC-BA45-93BE0454B7AE}
+	EndGlobalSection
+EndGlobal
