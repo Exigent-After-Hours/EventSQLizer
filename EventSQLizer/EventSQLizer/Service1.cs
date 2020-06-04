@@ -988,6 +988,8 @@ namespace EventSQLizer
             // Generate the alert and append it
             string friendly_member;// if possible, convert the member name into a more human-readable format for alerting
             try { friendly_member = member_name.Split(',')[0].Split('=')[1]; } catch { friendly_member = member_name; }
+            if (friendly_member == "-")
+                friendly_member = member_sid;
 
             Alert alert = new Alert
             {
@@ -1680,6 +1682,8 @@ namespace EventSQLizer
             // Generate the alert and append it
             string friendly_member;// if possible, convert the member name into a more human-readable format for alerting
             try { friendly_member = member_name.Split(',')[0].Split('=')[1]; } catch { friendly_member = member_name; }
+            if (friendly_member == "-")
+                friendly_member = member_sid;
 
             Alert alert = new Alert
             {
